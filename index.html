@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목</title>
+    <script src="js/html5shiv.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="pakage.json">
+    <link rel="stylesheet" href="sandbox.json">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!-- 1page -->
+
+    <section class="loading-wrap active">
+        <video src="img/test2.mp4" autoplay muted></video>
+    </section>
+    <header class="header">
+        <div class="inner">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo-01.svg" alt="">
+                </a>
+            </div>
+            <ul class="header-menu1">
+                <li>
+                    <a href="https://www.instagram.com/">instagram</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UClEUyuhESyVDV0T2LGOWM9w">youtube</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/?locale=ko_KR">facebook</a>
+                </li>
+                <li>
+                    <a target="_blank" href="mailto:wheks112@naver.com? subject=제목입니다!">
+                        <p>wheks112@naver.com</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="header-menu2">
+                <li>
+                    <a target="_blank" href="mailto:wheks112@naver.com? subject=제목입니다!">
+                        <p>wheks112@naver.com</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="main-visual main-visual1">
+        <canvas id="canvas"></canvas>
+        <div class="inner">
+            <ul class="left">
+
+                <li>
+                    HI,
+                </li>
+                <li>
+                    I’m a Motion Graphic Desginer <br>
+                    DO WON KIM
+                </li>
+                <li>
+                    Thank you for looking at my portfolio.
+                </li>
+            </ul>
+            <ul class="right">
+                <li>
+                    NAME- <br> DO WON KIM
+                </li>
+                <li>
+                    AGE- <br> 1998.01.09
+                </li>
+                <li>
+                    EDUCATION- <br> Yeungnam University <br> economics
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="main-visual main-visual2">
+        <div class="inner">
+            <ul class="left">
+                <li>
+                    I love expressing everything I imagine in images, colors, and virtual worlds. <br> In my free time,
+                    I love taking picture, Drawing, waching movie that inspire me
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Swiper -->
+    <section class="gallery">
+        <div class="swiper sw-gallery">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <img src="img/img1.jpg" />
+                </li>
+                <li class="swiper-slide">
+                    <img src="img/img2.jpg" />
+                </li>
+                <li class="swiper-slide">
+                    <img src="img/img3.jpg" />
+                </li>
+                <li class="swiper-slide">
+                    <img src="img/img4.jpg" />
+                </li>
+                <li class="swiper-slide">
+                    <img src="img/img5.jpg" />
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="visual">
+        <div class="inner">
+            <h2>title</h2>
+            <div class="swiper sw-work">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="video-box">
+                            <video autoplay="autoplay" muted src="img/김도원 - Text Me 키네틱타이포그래피.mp4" controls
+                                loop></video>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quibusdam.</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="video-box">
+                            <video autoplay="autoplay" muted src="img/김도원 - Text Me 키네틱타이포그래피.mp4" controls
+                                loop></video>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quibusdam.</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="video-box">
+                            <video autoplay="autoplay" muted src="img/김도원 - Text Me 키네틱타이포그래피.mp4" controls
+                                loop></video>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quibusdam.</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="video-box">
+                            <video autoplay="autoplay" muted src="img/김도원 - Text Me 키네틱타이포그래피.mp4" controls
+                                loop></video>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quibusdam.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    </footer>
+
+</body>
+
+</html>
+<script>
+    // loading wrap
+    setTimeout(() => {
+        document.querySelector(".loading-wrap").classList.remove("active")
+        document.querySelector(".main-visual ul.left").classList.add("active")
+        document.querySelector(".main-visual ul.right").classList.add("active")
+    }, 1000);
+
+    let workSwiper = new Swiper(".sw-work", {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+    });
+    //animation
+    let gallerySwiper = new Swiper(".sw-gallery", {
+        effect: "coverflow",
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+            },
+            // when window width is >= 640px
+            768: {
+                slidesPerView: 3,
+            }
+        }
+    });
+    AOS.init();
+
+    "use strict";
+
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        w = canvas.width = window.innerWidth,
+        h = canvas.height = window.innerHeight,
+
+        hue = 217,
+        stars = [],
+        count = 0,
+        maxStars = 1400;
+
+    // Thanks @jackrugile for the performance tip! https://codepen.io/jackrugile/pen/BjBGoM
+    // Cache gradient
+    var canvas2 = document.createElement('canvas'),
+        ctx2 = canvas2.getContext('2d');
+    canvas2.width = 100;
+    canvas2.height = 100;
+    var half = canvas2.width / 2,
+        gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+    gradient2.addColorStop(0.025, '#fff');
+    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+    gradient2.addColorStop(1, 'transparent');
+
+    ctx2.fillStyle = gradient2;
+    ctx2.beginPath();
+    ctx2.arc(half, half, half, 0, Math.PI * 2);
+    ctx2.fill();
+
+    // End cache
+
+    function random(min, max) {
+        if (arguments.length < 2) {
+            max = min;
+            min = 0;
+        }
+
+        if (min > max) {
+            var hold = max;
+            max = min;
+            min = hold;
+        }
+
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function maxOrbit(x, y) {
+        var max = Math.max(x, y),
+            diameter = Math.round(Math.sqrt(max * max + max * max));
+        return diameter / 2;
+    }
+
+    var Star = function () {
+
+        this.orbitRadius = random(maxOrbit(w, h));
+        this.radius = random(60, this.orbitRadius) / 12;
+        this.orbitX = w / 2;
+        this.orbitY = h / 2;
+        this.timePassed = random(0, maxStars);
+        this.speed = random(this.orbitRadius) / 50000;
+        this.alpha = random(2, 10) / 10;
+
+        count++;
+        stars[count] = this;
+    }
+
+    Star.prototype.draw = function () {
+        var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+            y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+            twinkle = random(10);
+
+        if (twinkle === 1 && this.alpha > 0) {
+            this.alpha -= 0.05;
+        } else if (twinkle === 2 && this.alpha < 1) {
+            this.alpha += 0.05;
+        }
+
+        ctx.globalAlpha = this.alpha;
+        ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+        this.timePassed += this.speed;
+    }
+
+    for (var i = 0; i < maxStars; i++) {
+        new Star();
+    }
+
+    function animation() {
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
+        ctx.fillRect(0, 0, w, h)
+
+        ctx.globalCompositeOperation = 'lighter';
+        for (var i = 1, l = stars.length; i < l; i++) {
+            stars[i].draw();
+        };
+
+        window.requestAnimationFrame(animation);
+    }
+
+    animation();
+</script>
